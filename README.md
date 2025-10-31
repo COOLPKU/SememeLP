@@ -106,7 +106,7 @@ The files `train.tsv`, `val.tsv` and `test.tsv` contain the triples in CWN5. The
 |**2**|Tail|syn\_002068|
 
 ## 🛠️ Code
-### Link Prediction Task
+### 1. Link Prediction Task
 SememeLP has two variants, SememeLP_sim and SememeLP_moco, which are developed by integrating the sememe knowledge fusion module into [SimKGC](https://github.com/intfloat/SimKGC) and [MoCoKGC](https://aclanthology.org/2024.emnlp-main.832/) frameworks, respectively. Their codes are uploaded to `src/sim` and `src/moco`. Requirements of the running environment and the usage are consistent with the open-source codes of [SimKGC](https://github.com/intfloat/SimKGC) and [MoCoKGC](https://aclanthology.org/2024.emnlp-main.832/).
 
 #### SememeLP_Sim
@@ -129,7 +129,7 @@ The code for SememeLP_MoCo is uploaded to `src/moco/`. To train or evaluate the 
 bash scripts/moco/run.sh
 ```
 
-### Sememe Prediction Task
+### 2. Sememe Prediction Task
 The code for Sememe Prediction is uploaded to `src/sp/`. To train and evaluate the model, use the following command:
 ```bash
 python trainer.py --model_name ./model --save_dir ./output --train_data_dir --device cuda:0
