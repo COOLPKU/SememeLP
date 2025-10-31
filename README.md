@@ -29,7 +29,7 @@ Each sample includes a word sense definition, corresponding sememes, and the mai
 
 ### 2. HN7 (Chinese LP Dataset)
 #### General description
-HN7 is built upon HowNet, following the instructions of [OpenHonwet](https://github.com/thunlp/SCPapers/blob/master/resources/2003_%E7%9F%A5%E7%BD%91.pdf). It also follows the [WN18RR](https://ojs.aaai.org/index.php/AAAI/article/view/11573) benchmark to avoid test leakage. Dataset Details are shown in the following table:
+HN7 is built upon HowNet, following the instructions of [OpenHownet](https://github.com/thunlp/SCPapers/blob/master/resources/2003_%E7%9F%A5%E7%BD%91.pdf). It also follows the [WN18RR](https://ojs.aaai.org/index.php/AAAI/article/view/11573) benchmark to avoid test leakage. Dataset Details are shown in the following table:
 
 | Item                | Value                  |
 |---------------------|------------------------|
@@ -85,7 +85,7 @@ These resources are uploaded to `data/CWN5/`. The file structure is as follows:
   - `test.tsv`: Data for the Test set,
 
 #### Data Format
-The file `entities_data.txt` contains the information of synsets in CWN5. The columns are separated by \\t. The format and example of the data are shown in the table:
+The file `synsets_data.txt` contains the information of synsets in CWN5. The columns are separated by \\t. The format and example of the data are shown in the table:
 |Column|Description|Example|
 |:----|:----|:----|
 |**0**|Synset ID|syn\_004810|
@@ -101,113 +101,13 @@ The files `train.tsv`, `val.tsv` and `test.tsv` contain the triples in CWN5. The
 |**2**|Tail|syn\_002068|
 
 ## 🛠️ Code
-### Installation
-We recommend using `conda` to manage the environment.
+### Link Prediction Task
 
-1. Create and activate the environment:
+### Sememe Prediction Task
+The code for Sememe Prediction are uploaded to `src/sp/`. To training the model, use the following command:
 ```bash
-conda create -n sememelp python==3.10
-conda activate sememelp
+python trainer.py --model_name ./model --save_dir ./output --train_data_dir --device cuda:0
 ```
-
-2. Clone the repository and install dependencies:
-```bash
-git clone https://github.com/[your-username]/SememeLP.git
-cd SememeLP
-pip3 install -e .
-# Install additional dependencies (to be filled by user, e.g., torch, transformers)
-# pip3 install torch==2.1.0 transformers==4.35.2 ...
-```
-
-3. Install optional dependencies (if needed):
-```bash
-# For GPU acceleration (example)
-conda install -c pytorch -c nvidia faiss-gpu=1.8.0
-# For FlashAttention (optional)
-pip3 install flash-attn --no-build-isolation
-```
-
-### Quick Start
-#### 1. Data Preparation
-- Download the datasets from [to be filled by user, e.g., Google Drive/Weiyun] and extract them to the `data/` directory.
-- The directory structure should be:
-```
-SememeLP/
-├── data/
-│   ├── sememedef/
-│   │   ├── train/
-│   │   └── val/
-│   ├── hn7/
-│   │   ├── train_triples.tsv
-│   │   ├── val_triples.tsv
-│   │   ├── test_triples.tsv
-│   │   └── definitions.json
-│   └── cwn5/
-│       ├── train_triples.tsv
-│       ├── val_triples.tsv
-│       ├── test_triples.tsv
-│       └── definitions.json
-└── src/
-```
-
-#### 2. Training
-We provide training scripts for two core stages: (1) Sememe Encoder Fine-tuning (SP task), (2) SememeLP Training (LP task).
-
-##### Stage 1: Fine-tune Sememe Encoder
-```bash
-cd scripts/train
-bash train_sememe_encoder.sh \
-    --train_data ../data/sememedef/train \
-    --val_data ../data/sememedef/val \
-    --model_name [base-model-name, e.g., chinese-bert-base-wwm-ext] \
-    --output_dir ../checkpoints/sememe_encoder \
-    # Additional hyperparameters (to be filled by user)
-```
-
-##### Stage 2: Train SememeLP
-```bash
-cd scripts/train
-bash train_sememelp.sh \
-    --dataset [hn7/cwn5/wn18rr] \
-    --data_dir ../data/[hn7/cwn5] \
-    --sememe_encoder_path ../checkpoints/sememe_encoder/best_model \
-    --output_dir ../checkpoints/sememelp \
-    # Additional hyperparameters (to be filled by user, e.g., batch_size, epochs)
-```
-
-#### 3. Inference
-Use the trained SememeLP model for link prediction inference:
-```bash
-cd scripts/inference
-python run_inference.py \
-    --model_path ../checkpoints/sememelp/best_model \
-    --dataset [hn7/cwn5] \
-    --test_data ../data/[hn7/cwn5]/test_triples.tsv \
-    --output_path ../results/inference_output.json \
-    # Additional parameters (to be filled by user)
-```
-
-#### 4. Evaluation
-Evaluate the model performance using MRR, Hits@1/3/10 metrics:
-```bash
-cd scripts/evaluation
-python run_eval.py \
-    --pred_path ../results/inference_output.json \
-    --ground_truth_path ../data/[hn7/cwn5]/test_triples.tsv \
-    --metric [mrr/hits@1/hits@3/hits@10] \
-    --output_path ../results/eval_results.txt \
-    # Additional parameters (to be filled by user)
-```
-
-## 📈 Results
-SememeLP achieves SOTA performance on English and Chinese LP datasets:
-| Dataset  | MRR   | Hits@1 | Hits@3 | Hits@10 |
-|----------|-------|--------|--------|---------|
-| WN18RR   | 75.1% | 67.6%  | 79.8%  | 88.5%   |
-| HN7      | 80.5% | 74.6%  | 84.0%  | 91.8%   |
-| CWN5     | 77.1% | 69.2%  | 82.5%  | 90.6%   |
-
-For detailed results and analysis, refer to our paper.
 
 ## 🤝 Acknowledgements
 This work is based on the following open-source projects:
