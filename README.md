@@ -106,9 +106,9 @@ SememeLP has two variants, SememeLP_sim and SememeLP_moco, which are developed b
 
 #### SememeLP_sim
 ##### Requirements
-python>=3.7
-torch>=1.6 (for mixed precision training)
-transformers>=4.15
+- python>=3.7
+- torch>=1.6 
+- transformers>=4.15
 ##### How to Run
 It involves 3 steps: dataset preprocessing, model training, and model evaluation.
 Step 1, preprocess the dataset
