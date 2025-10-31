@@ -25,7 +25,7 @@ Each sample includes a word sense definition, corresponding sememes, and the mai
 |Column|Description|Example|
 |:----|:----|:----|
 |**0**|Word Sense Definition|a person whose job is teaching|
-|**1**|Sememes|human\|人,occupation\|职位,education\|教育,teach\|教|
+|**1**|Sememes|human\|人, occupation\|职位, education\|教育, teach\|教|
 |**2**|MainSememe|human\|人|
 
 
