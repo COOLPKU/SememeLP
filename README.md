@@ -102,7 +102,7 @@ The files `train.tsv`, `val.tsv` and `test.tsv` contain the triples in CWN5. The
 
 ## 🛠️ Code
 ### Link Prediction Task
-SememeLP has two variants, SememeLP_sim and SememeLP_moco, which are developed by integrating the sememe knowledge fusion module into [SimKGC](https://github.com/intfloat/SimKGC) and [MoCoKGC](https://aclanthology.org/2024.emnlp-main.832/) frameworks, respectively. Their codes are uploaded to src/sim and src/moco. Requirements of the running environment and the usage are consistent with the open-source codes of [SimKGC](https://github.com/intfloat/SimKGC) and [MoCoKGC](https://aclanthology.org/2024.emnlp-main.832/).
+SememeLP has two variants, SememeLP_sim and SememeLP_moco, which are developed by integrating the sememe knowledge fusion module into [SimKGC](https://github.com/intfloat/SimKGC) and [MoCoKGC](https://aclanthology.org/2024.emnlp-main.832/) frameworks, respectively. Their codes are uploaded to `src/sim` and `src/moco`. Requirements of the running environment and the usage are consistent with the open-source codes of [SimKGC](https://github.com/intfloat/SimKGC) and [MoCoKGC](https://aclanthology.org/2024.emnlp-main.832/).
 
 #### SememeLP_sim
 ##### Requirements
