@@ -151,5 +151,5 @@ If you find this work useful, please cite our paper:
 ```
 
 ## 📄 More Resources
-or more work and resources related to the Chinese Object-Oriented Lexicon (COOL), Peking University, please refer to [this repository](https://github.com/COOLPKU) (to be released in the near future).
+For more work and resources related to the Chinese Object-Oriented Lexicon (COOL), Peking University, please refer to [this repository](https://github.com/COOLPKU) (to be released in the near future).
 
