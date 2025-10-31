@@ -102,6 +102,29 @@ The files `train.tsv`, `val.tsv` and `test.tsv` contain the triples in CWN5. The
 
 ## 🛠️ Code
 ### Link Prediction Task
+SememeLP has two variants, SememeLP_sim and SememeLP_moco, which are developed by integrating the sememe knowledge fusion module into [SimKGC](https://github.com/intfloat/SimKGC) and [MoCoKGC](https://aclanthology.org/2024.emnlp-main.832/) frameworks, respectively. Their codes are uploaded to src/sim and src/moco. Requirements of the running environment and the usage are consistent with the open-source codes of [SimKGC](https://github.com/intfloat/SimKGC) and [MoCoKGC](https://aclanthology.org/2024.emnlp-main.832/).
+
+#### SememeLP_sim
+##### Requirements
+python>=3.7
+torch>=1.6 (for mixed precision training)
+transformers>=4.15
+##### How to Run
+It involves 3 steps: dataset preprocessing, model training, and model evaluation.
+Step 1, preprocess the dataset
+```bash
+bash scripts/sim/preprocess.sh WN18RR
+```
+Step 2, training the model and (optionally) specify the output directory
+```bash
+OUTPUT_DIR=./checkpoint/wn18rr/ bash scripts/sim/train_wn.sh
+```
+Step 3, evaluate a trained model
+```bash
+bash scripts/sim/eval.sh ./checkpoint/wn18rr/model_last.mdl WN18RR
+```
+
+
 
 ### Sememe Prediction Task
 The code for Sememe Prediction are uploaded to `src/sp/`. To training the model, use the following command:
