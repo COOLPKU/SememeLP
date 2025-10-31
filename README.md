@@ -7,40 +7,28 @@ Data and code for the paper "How Sememic Components Can Benefit Link Prediction 
 We provide the SememeDef dataset for Sememe Prediction (SP), along with two Chinese datasets, HN7 and CWN5, for Link Prediction (LP), aiming to alleviate the scarcity of both SP and Chinese LP resources.
 
 ### 1. SememeDef (Sememe Prediction Dataset)
-#### Overview
-Our SememeDef dataset contains a substantial amount of word senses with sememe annotations for both English and Chinese (70,645 English samples and 43,163 Chinese ones, covering 2,042 and 1,762 sememes, respectively). Among them, the English data is integrated from [sememebabel](https://github.com/thunlp/MSGI), while the Chinese data is obtained based on Word Sense Alignment (WSA) results between Hownet and CCD.
+#### General description
+Our SememeDef dataset contains a substantial amount of word senses with sememe annotations for both English and Chinese (70,645 English samples and 43,163 Chinese ones, covering 2,042 and 1,762 sememes, respectively). Among them, the English data is integrated from [SememeBabel](https://github.com/thunlp/MSGI), while the Chinese data is obtained based on Word Sense Alignment (WSA) results between Hownet and CCD.
 
 To respect intellectual property rights and better meet the needs of computational applications, we have referred to the approach of [MiCLS](https://github.com/COOLPKU/MorBERT), condensed the relevant semantic space to some extent, and made extensive revisions and optimizations to the word sense definitions.
 
-Here, we have open-sourced a subset of the Chinese part of this resource, which includes 20,492 word senses for 15,000 words (the vocabulary is consistent with the [MiCLS](https://github.com/COOLPKU/MorBERT) resource previously published by [COOLPKU](https://github.com/COOLPKU/COOL).
+Here, we have open-sourced a subset of the Chinese part of this resource, which includes 20,492 word senses for 15,000 words (the vocabulary is consistent with the [MiCLS](https://github.com/COOLPKU/MorBERT) resource previously open-sourced by [COOLPKU](https://github.com/COOLPKU/COOL). As a result, the experimental results for Chinese in the paper may be slightly affected during replication.
+
+These resources are uploaded to `data/SememeDef/`. The file structure is as follows:
+- `data/SememeDef/`: data files
+  - `en.txt`: Data for English
+  - `zh.txt`: Data for Chinese
+
 
 #### Data Format
-| Language | Total Samples | Sememe Coverage | Split Ratio (Train:Val) |
-|----------|---------------|-----------------|--------------------------|
-| English  | 70,645        | 2,042 sememes   | 19:1                     |
-| Chinese  | 43,163        | 1,762 sememes   | 19:1                     |
+Each sample includes a word sense definition, corresponding sememes, and the main sememe. The columns are separated by a space. The format and example of the data are shown in the table:
+|Column|Description|Example|
+|:----|:----|:----|
+|**0**|Word Sense Definition|a person whose job is teaching|
+|**1**|Sememes|human|人,occupation|职位,education|教育,teach|教|
+|**2**|MainSememe|human|人|
 
-#### Data Format
-Each sample includes a word sense definition, corresponding sememes, and the main sememe. The file format is [to be filled by user, e.g., JSON/Parquet]:
-```
-# Example (Chinese)
-{
-  "sense_id": "XXX",
-  "word": "学校",
-  "definition": "专门进行教育的机构",
-  "sememes": ["institutePlace|场所", "education|教育", "study|学习", "teach|教"],
-  "main_sememe": "institutePlace|场所"
-}
 
-# Example (English)
-{
-  "sense_id": "XXX",
-  "word": "boy",
-  "definition": "a young male person",
-  "sememes": ["human", "male", "immature"],
-  "main_sememe": "human"
-}
-```
 
 ### 2. HN7 (Chinese LP Dataset)
 #### Overview
