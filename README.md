@@ -1,19 +1,18 @@
-# SememeLP: Enhancing Lexico-Semantic Knowledge Graph Link Prediction with Sememic Components
+# How Sememic Components Can Benefit Link Prediction for Lexico-Semantic Knowledge Graphs?
 [![Paper](https://img.shields.io/badge/Paper-EMNLP%202025-blue)](https://arxiv.org/abs/XXX) [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-A novel framework that leverages sememe knowledge to boost link prediction (LP) performance for lexico-semantic knowledge graphs (KGs). This repository contains the official implementation of the paper **"How Sememic Components Can Benefit Link Prediction for Lexico-Semantic Knowledge Graphs?"**
-
-## 🌟 Key Contributions
-1. Construct **SememeDef**: A large-scale sememe prediction (SP) dataset with中英文 (English-Chinese) sense definitions and sememe annotations.
-2. Build **HN7** and **CWN5**: Two high-quality Chinese lexico-semantic LP datasets based on HowNet and Chinese WordNet (CWN).
-3. Propose **SememeLP**: A BERT-based model with a three-stage fusion module to integrate sememe knowledge, achieving SOTA performance on WN18RR, HN7, and CWN5.
+Data and code for the paper "How Sememic Components Can Benefit Link Prediction for Lexico-Semantic Knowledge Graphs?" in EMNLP 2025 Main.
 
 ## 📊 Data
-We provide three core datasets for SP and LP tasks. All datasets are available for download after paper acceptance.
+We provide the SememeDef dataset for Sememe Prediction (SP), along with two Chinese datasets, HN7 and CWN5, for Link Prediction (LP), aiming to alleviate the scarcity of both SP and Chinese LP resources.
 
 ### 1. SememeDef (Sememe Prediction Dataset)
 #### Overview
-SememeDef is designed for training sememe knowledge encoders, addressing the scarcity of Chinese SP resources. It contains sense definitions paired with sememe annotations, aligned from HowNet and the Contemporary Chinese Dictionary (CCD) via LLM-based semantic consistency checking.
+Our SememeDef dataset covers sememe annotation data for both English and Chinese word senses, containing 70,645 English samples and 43,163 Chinese samples, involving 2,042 and 1,762 sememes respectively. Among them, the English data is integrated from [sememebabel](https://github.com/thunlp/MSGI), and the Chinese data is obtained based on the word sense alignment results of Hownet and CCD.
+
+To respect intellectual property rights and better meet the needs of computational applications, we have referred to the approach of [MiCLS](https://github.com/COOLPKU/MorBERT), condensed the relevant semantic space to some extent, and made extensive revisions and optimizations to the word sense definitions.
+
+Here, we have open-sourced a subset of the Chinese part of this resource, which includes 20,492 word senses for 15,000 words (its vocabulary is consistent with the [MiCLS](https://github.com/COOLPKU/MorBERT) resource previously published by COOLPKU ([https://github.com/COOLPKU/MorBERT](https://github.com/COOLPKU/MorBERT))).
 
 #### Dataset Details
 | Language | Total Samples | Sememe Coverage | Split Ratio (Train:Val) |
