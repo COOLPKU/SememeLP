@@ -4,10 +4,12 @@
 Data and code for the paper "How Sememic Components Can Benefit Link Prediction for Lexico-Semantic Knowledge Graphs?" in EMNLP 2025 Main.
 
 ## 🌟 Key Contributions
-
+- We provide the SememeDef dataset for Sememe Prediction (SP), along with two Chinese datasets, HN7 and CWN5, for Link Prediction (LP), aiming to alleviate the scarcity of both SP and Chinese LP resources;
+- We propose the SememeLP method to leverage fine-grained sememe knowledge for enhancing LP in lexico-semantic KGs, achieving SOTA MRR of 75.1%, 80.5%, and 77.1% on WN18RR, HN7 and CWN5, respectively;
+- We make clear how sememic components can benefit LP for lexico-semantic KGs, providing  promising progress for the completion of such KGs, facilitating downstream tasks enriched by them;
+- We tackle the challenges of leveraging sememe information in annotation-scarce scenarios and present a potentially generalizable method to utilize such information to benefit more lexico-semantic tasks.
 
 ## 📊 Data
-We provide the SememeDef dataset for Sememe Prediction (SP), along with two Chinese datasets, HN7 and CWN5, for Link Prediction (LP), aiming to alleviate the scarcity of both SP and Chinese LP resources.
 
 ### 1. SememeDef (Sememe Prediction Dataset)
 #### General description
@@ -107,30 +109,28 @@ The files `train.tsv`, `val.tsv` and `test.tsv` contain the triples in CWN5. The
 ### Link Prediction Task
 SememeLP has two variants, SememeLP_sim and SememeLP_moco, which are developed by integrating the sememe knowledge fusion module into [SimKGC](https://github.com/intfloat/SimKGC) and [MoCoKGC](https://aclanthology.org/2024.emnlp-main.832/) frameworks, respectively. Their codes are uploaded to `src/sim` and `src/moco`. Requirements of the running environment and the usage are consistent with the open-source codes of [SimKGC](https://github.com/intfloat/SimKGC) and [MoCoKGC](https://aclanthology.org/2024.emnlp-main.832/).
 
-#### SememeLP_sim
-##### Requirements
-- python>=3.7
-- torch>=1.6 
-- transformers>=4.15
-##### How to Run
-It involves 3 steps: dataset preprocessing, model training, and model evaluation.
+#### SememeLP_Sim
+The code for SememeLP_sim are uploaded to `src/sim/`. It involves 3 steps: dataset preprocessing, model training, and model evaluation.
 Step 1, preprocess the dataset
 ```bash
 bash scripts/sim/preprocess.sh WN18RR
 ```
 Step 2, training the model and (optionally) specify the output directory
 ```bash
-OUTPUT_DIR=./checkpoint/wn18rr/ bash scripts/sim/train_wn.sh
+OUTPUT_DIR=./checkpoint/wn18rr/ bash scripts/sim/train.sh
 ```
-Step 3, evaluate a trained model
+Step 3, evaluate the model
 ```bash
-bash scripts/sim/eval.sh ./checkpoint/wn18rr/model_last.mdl WN18RR
+bash scripts/sim/eval.sh ./checkpoint/model_last.mdl WN18RR
 ```
-
-
+#### SememeLP_MoCo
+The code for SememeLP_MoCo are uploaded to `src/moco/`. To train or evaluate the model, just modify the `task` parameter in the script (`train` for training and `test` for evaluation).
+```bash
+bash scripts/moco/run.sh
+```
 
 ### Sememe Prediction Task
-The code for Sememe Prediction are uploaded to `src/sp/`. To training the model, use the following command:
+The code for Sememe Prediction are uploaded to `src/sp/`. To train and evaluate the model, use the following command:
 ```bash
 python trainer.py --model_name ./model --save_dir ./output --train_data_dir --device cuda:0
 ```
