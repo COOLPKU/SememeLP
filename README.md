@@ -8,13 +8,13 @@ We provide the SememeDef dataset for Sememe Prediction (SP), along with two Chin
 
 ### 1. SememeDef (Sememe Prediction Dataset)
 #### Overview
-Our SememeDef dataset covers sememe annotation data for both English and Chinese word senses, containing 70,645 English samples and 43,163 Chinese samples, involving 2,042 and 1,762 sememes respectively. Among them, the English data is integrated from [sememebabel](https://github.com/thunlp/MSGI), and the Chinese data is obtained based on the word sense alignment results of Hownet and CCD.
+Our SememeDef dataset contains a substantial amount of word senses with sememe annotations for both English and Chinese (70,645 English samples and 43,163 Chinese ones, covering 2,042 and 1,762 sememes, respectively). Among them, the English data is integrated from [sememebabel](https://github.com/thunlp/MSGI), while the Chinese data is obtained based on Word Sense Alignment (WSA) results between Hownet and CCD.
 
 To respect intellectual property rights and better meet the needs of computational applications, we have referred to the approach of [MiCLS](https://github.com/COOLPKU/MorBERT), condensed the relevant semantic space to some extent, and made extensive revisions and optimizations to the word sense definitions.
 
-Here, we have open-sourced a subset of the Chinese part of this resource, which includes 20,492 word senses for 15,000 words (its vocabulary is consistent with the [MiCLS](https://github.com/COOLPKU/MorBERT) resource previously published by COOLPKU ([https://github.com/COOLPKU/MorBERT](https://github.com/COOLPKU/MorBERT))).
+Here, we have open-sourced a subset of the Chinese part of this resource, which includes 20,492 word senses for 15,000 words (the vocabulary is consistent with the [MiCLS](https://github.com/COOLPKU/MorBERT) resource previously published by [COOLPKU](https://github.com/COOLPKU/COOL).
 
-#### Dataset Details
+#### Data Format
 | Language | Total Samples | Sememe Coverage | Split Ratio (Train:Val) |
 |----------|---------------|-----------------|--------------------------|
 | English  | 70,645        | 2,042 sememes   | 19:1                     |
