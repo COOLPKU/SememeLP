@@ -13,7 +13,7 @@ Data and code for the paper "How Sememic Components Can Benefit Link Prediction 
 
 ### 1. SememeDef (Sememe Prediction Dataset)
 #### General description
-Our SememeDef dataset contains a substantial amount of word senses with sememe annotations for both English and Chinese (70,645 English samples and 43,163 Chinese ones, covering 2,042 and 1,762 sememes, respectively). Among them, the English data is integrated from [SememeBabel](https://github.com/thunlp/MSGI), while the Chinese data is obtained based on Word Sense Alignment (WSA) results between Hownet and CCD.
+Our SememeDef dataset contains a substantial amount of word senses with sememe annotations for both English and Chinese (70,645 English samples and 43,163 Chinese ones, covering 2,042 and 1,762 sememes, respectively). Among them, the English data is integrated from [SememeBabel](https://github.com/thunlp/MSGI), while the Chinese data is obtained based on Word Sense Alignment (WSA) results between Hownet and the Contemporary Chinese Dictionary (CCD).
 
 To respect intellectual property rights and better meet the needs of computational applications, we have referred to the approach of [MiCLS](https://github.com/COOLPKU/MorBERT), condensed the relevant semantic space to some extent, and made extensive revisions and optimizations to the word sense definitions.
 
