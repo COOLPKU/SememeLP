@@ -1,5 +1,5 @@
 # How Sememic Components Can Benefit Link Prediction for Lexico-Semantic Knowledge Graphs?
-[![Paper](https://img.shields.io/badge/Paper-EMNLP%202025-blue)](https://arxiv.org/abs/XXX) [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Paper](https://img.shields.io/badge/Paper-EMNLP%202025-blue)](https://arxiv.org/abs/XXX)
 
 Data and code for the paper "How Sememic Components Can Benefit Link Prediction for Lexico-Semantic Knowledge Graphs?" in EMNLP 2025 Main.
 
