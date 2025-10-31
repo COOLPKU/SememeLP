@@ -110,7 +110,7 @@ The files `train.tsv`, `val.tsv` and `test.tsv` contain the triples in CWN5. The
 SememeLP has two variants, SememeLP_sim and SememeLP_moco, which are developed by integrating the sememe knowledge fusion module into [SimKGC](https://github.com/intfloat/SimKGC) and [MoCoKGC](https://aclanthology.org/2024.emnlp-main.832/) frameworks, respectively. Their codes are uploaded to `src/sim` and `src/moco`. Requirements of the running environment and the usage are consistent with the open-source codes of [SimKGC](https://github.com/intfloat/SimKGC) and [MoCoKGC](https://aclanthology.org/2024.emnlp-main.832/).
 
 #### SememeLP_Sim
-The code for SememeLP_sim are uploaded to `src/sim/`. It involves 3 steps: dataset preprocessing, model training, and model evaluation.
+The code for SememeLP_sim is uploaded to `src/sim/`. It involves 3 steps: dataset preprocessing, model training, and model evaluation.
 Step 1, preprocess the dataset
 ```bash
 bash scripts/sim/preprocess.sh WN18RR
@@ -124,13 +124,13 @@ Step 3, evaluate the model
 bash scripts/sim/eval.sh ./checkpoint/model_last.mdl WN18RR
 ```
 #### SememeLP_MoCo
-The code for SememeLP_MoCo are uploaded to `src/moco/`. To train or evaluate the model, just modify the `task` parameter in the script (`train` for training and `test` for evaluation).
+The code for SememeLP_MoCo is uploaded to `src/moco/`. To train or evaluate the model, just modify the `task` parameter in the script (`train` for training and `test` for evaluation).
 ```bash
 bash scripts/moco/run.sh
 ```
 
 ### Sememe Prediction Task
-The code for Sememe Prediction are uploaded to `src/sp/`. To train and evaluate the model, use the following command:
+The code for Sememe Prediction is uploaded to `src/sp/`. To train and evaluate the model, use the following command:
 ```bash
 python trainer.py --model_name ./model --save_dir ./output --train_data_dir --device cuda:0
 ```
