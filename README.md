@@ -110,13 +110,8 @@ python trainer.py --model_name ./model --save_dir ./output --train_data_dir --de
 ```
 
 ## 🤝 Acknowledgements
-This work is based on the following open-source projects:
-- [Hugging Face Transformers](https://github.com/huggingface/transformers)
-- [PyTorch](https://pytorch.org/)
-- [HowNet](https://www.keenage.com/)
-- [Chinese WordNet](https://lope.linguistics.ntu.edu.tw/cwn/)
+This paper is supported by the National Natural Science Foundation of China (No. 62036001).
 
-We sincerely appreciate their contributions to the community.
 
 ## 📚 Citation
 If you find this work useful, please cite our paper:
@@ -129,9 +124,6 @@ If you find this work useful, please cite our paper:
 }
 ```
 
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 📄 More Resources
+or more work and resources related to the Chinese Object-Oriented Lexicon (COOL), Peking University, please refer to [this repository](https://github.com/COOLPKU) (to be released in the near future).
 
----
-
-要不要我帮你补充**数据集下载链接模板**或**代码占位符的具体示例**？比如细化训练脚本的参数说明，或补充数据集的样例文件内容。
