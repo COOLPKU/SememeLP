@@ -15,9 +15,9 @@ Data and code for the paper "How Sememic Components Can Benefit Link Prediction 
 #### General description
 Our SememeDef dataset contains a substantial amount of word senses with sememe annotations for both English and Chinese (70,645 English samples and 43,163 Chinese ones, covering 2,042 and 1,762 sememes, respectively). Among them, the English data is integrated from [SememeBabel](https://github.com/thunlp/MSGI), while the Chinese data is obtained based on Word Sense Alignment (WSA) results between Hownet and the Contemporary Chinese Dictionary (CCD).
 
-To respect intellectual property rights and better meet the needs of computational applications, we have referred to the approach of [MiCLS](https://github.com/COOLPKU/MorBERT), condensed the relevant semantic space to some extent, and made extensive revisions and optimizations to the word sense definitions.
+To respect intellectual property rights and better meet the needs of computational applications, we have followed the approach of [MiCLS](https://github.com/COOLPKU/MorBERT), condensed the relevant semantic space to some extent, and made extensive revisions and optimizations to the word sense definitions.
 
-Here, we have open-sourced a subset of the Chinese part of this resource, which includes 20,492 word senses for 15,000 words (the vocabulary is consistent with the [MiCLS](https://github.com/COOLPKU/MorBERT) resource previously open-sourced by [COOLPKU](https://github.com/COOLPKU/COOL). As a result, the experimental results for Chinese in the paper may be slightly affected during replication.
+Here, we have open-sourced a subset of the Chinese part of this resource, which includes 20,492 word senses for 15,000 words (the vocabulary is consistent with the [MiCLS](https://github.com/COOLPKU/MorBERT) resource previously open-sourced by [COOLPKU](https://github.com/COOLPKU/COOL)). As a result, the experimental results for Chinese in the paper may be slightly affected during replication.
 
 These resources are uploaded to `data/SememeDef/`. The file structure is as follows:
 - `data/SememeDef/`: data files
