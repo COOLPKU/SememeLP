@@ -135,10 +135,6 @@ The code for Sememe Prediction is uploaded to `src/sp/`. To train and evaluate t
 python trainer.py --model_name ./model --save_dir ./output --train_data_dir --device cuda:0
 ```
 
-## 🤝 Acknowledgements
-This paper is supported by the National Natural Science Foundation of China (No. 62036001).
-
-
 ## 📚 Citation
 If you find this work useful, please cite our paper:
 ```bibtex
