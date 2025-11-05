@@ -1,7 +1,7 @@
 # How Sememic Components Can Benefit Link Prediction for Lexico-Semantic Knowledge Graphs?
 [![Paper](https://img.shields.io/badge/Paper-EMNLP%202025-blue)](https://aclanthology.org/2025.emnlp-main.740/)
 
-Data and code for the paper "How Sememic Components Can Benefit Link Prediction for Lexico-Semantic Knowledge Graphs?" in EMNLP 2025 Main.
+Data and code for the paper "How Sememic Components Can Benefit Link Prediction for Lexico-Semantic Knowledge Graphs?" in EMNLP 2025 Main Oral.
 
 ## 🌟 Key Contributions
 - We provide the SememeDef dataset for Sememe Prediction (SP), along =with two Chinese datasets, HN7 and CWN5, for Link Prediction (LP), aiming to alleviate the scarcity of both SP and Chinese LP resources;
