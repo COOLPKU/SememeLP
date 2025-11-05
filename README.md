@@ -142,26 +142,7 @@ This paper is supported by the National Natural Science Foundation of China (No.
 ## 📚 Citation
 If you find this work useful, please cite our paper:
 ```bibtex
-@inproceedings{wang-etal-2025-sememic,
-    title = "How Sememic Components Can Benefit Link Prediction for Lexico-Semantic Knowledge Graphs?",
-    author = "Wang, Hansi  and
-      Wang, Yue  and
-      Liang, Qiliang  and
-      Liu, Yang",
-    editor = "Christodoulopoulos, Christos  and
-      Chakraborty, Tanmoy  and
-      Rose, Carolyn  and
-      Peng, Violet",
-    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
-    month = nov,
-    year = "2025",
-    address = "Suzhou, China",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2025.emnlp-main.740/",
-    pages = "14665--14684",
-    ISBN = "979-8-89176-332-6",
-    abstract = "Link Prediction (LP) aims to predict missing triple information within a Knowledge Graph (KG). Existing LP methods have sought to improve the performance by integrating structural and textual information. However, for lexico-semantic KGs designed to document fine-grained sense distinctions, these types of information may not be sufficient to support effective LP. From a linguistic perspective, word senses within lexico-semantic relations usually show systematic differences in their sememic components. In light of this, we are motivated to enhance LP with sememe knowledge. We first construct a Sememe Prediction (SP) dataset, SememeDef, for learning such knowledge, and two Chinese datasets, HN7 and CWN5, for LP evaluation; Then, we propose a method, SememeLP, to leverage this knowledge for LP fully. It consistently and significantly improves the LP performance in both English and Chinese, achieving SOTA MRR of 75.1{\%}, 80.5{\%}, and 77.1{\%} on WN18RR, HN7, and CWN5, respectively; Finally, an in-depth analysis is conducted, making clear how sememic components can benefit LP for lexico-semantic KGs, which provides promising progress for the completion of them."
-}
+Hansi Wang, Yue Wang, Qiliang Liang, and Yang Liu. 2025. How Sememic Components Can Benefit Link Prediction for Lexico-Semantic Knowledge Graphs?. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing, pages 14665–14684, Suzhou, China. Association for Computational Linguistics.
 ```
 
 ## 📄 More Resources
