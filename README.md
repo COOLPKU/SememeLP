@@ -147,3 +147,6 @@ Hansi Wang, Yue Wang, Qiliang Liang, and Yang Liu. 2025. How Sememic Components 
 ## 📄 More Resources
 For more work and resources related to the Chinese Object-Oriented Lexicon (COOL), Peking University, please refer to [this repository](https://github.com/COOLPKU) (to be released in the near future).
 
+## 💬 Contact author
+[Click here](https://hansiwangpku.github.io)
+
