@@ -17,7 +17,7 @@ Our SememeDef dataset contains a substantial amount of word senses with sememe a
 
 To respect intellectual property rights and better meet the needs of computational applications, we have followed the approach of [MiCLS](https://github.com/COOLPKU/MorBERT), condensed the relevant semantic space to some extent, and made extensive revisions and optimizations to the word sense definitions.
 
-Here, we have open-sourced a subset of the Chinese part of this resource, which includes 20,492 word senses for 15,000 words (the vocabulary is consistent with the [MiCLS](https://github.com/COOLPKU/MorBERT) resource previously open-sourced by [COOLPKU](https://github.com/COOLPKU/COOL)). As a result, the experimental results for Chinese in the paper may be slightly affected during replication.
+Here, we have open-sourced a subset of the Chinese part of this resource, which includes 14,212 word senses for 12,589 words (the vocabulary is consistent with the [MiCLS](https://github.com/COOLPKU/MorBERT) resource previously open-sourced by [COOLPKU](https://github.com/COOLPKU/COOL)). As a result, the experimental results for Chinese in the paper may be slightly affected during replication.
 
 These resources are uploaded to `data/SememeDef/`. The file structure is as follows:
 - `data/SememeDef/`: data files
