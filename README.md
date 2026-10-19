@@ -23,12 +23,12 @@ These resources are uploaded to `data/SememeDef/`. The file structure is as foll
 - `data/SememeDef/`: data files
   - `en.txt`: Data for English
   - `zh.txt`: Data for Chinese
-  - `en_v2.txt`: Larger-Scale Data for English
+  - `en_v2`: Larger-Scale Data for English
 
 
 
 #### Data Format
-Each sample includes a word sense definition, corresponding sememes, and the main sememe. The columns are separated by \\t. The format and example of the data are shown in the table:
+Each sample includes a word sense definition, corresponding sememes, and the main sememe. The columns are separated by \\t for en.txt and zh.txt. The format and example of the data are shown in the table:
 |Column|Description|Example|
 |:----|:----|:----|
 |**0**|Word Sense Definition|a person whose job is teaching|
